@@ -1,3 +1,5 @@
+//本项目为 枢迹Surti(QQ:3664760878) 编写，根据MIT许可证，使用此代码时可将此行删除
+
 function generatePerlinTerrain(world, options = {}) {
 	const config = {
 		seed: options.seed || Math.floor(Math.random() * 10000),
