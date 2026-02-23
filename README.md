@@ -117,13 +117,13 @@ generatePerlinTerrain(world, {
     <td><code>surfaceBlock</code></td>
     <td>string</td>
     <td>'grass'</td>
-    <td>地表方块的ID（如 "snow"、"grass"、"stone"）</td>
+    <td>地表方块的ID（如 "snow"、"grass"、"stone" 等）</td>
   </tr>
   <tr>
     <td><code>subsurfaceBlock</code></td>
     <td>string|null</td>
     <td>'dirt'</td>
-    <td>地表下方的方块ID，若为 null 则仅放置地表</td>
+    <td>地表下方的方块ID（如 "snow"、"grass"、"stone" 等），若为 null 则仅放置地表</td>
   </tr>
   <tr>
     <td><code>originX</code></td>
@@ -153,7 +153,7 @@ generatePerlinTerrain(world, {
     <td><code>maxHeight</code></td>
     <td>number</td>
     <td>127</td>
-    <td>世界最大高度限制，避免地形超出上限</td>
+    <td>在Y轴方向生成的地形宽度</td>
   </tr>
 </table>
 
@@ -238,23 +238,6 @@ for (let x = 0; x < result.size.x; x++) {
     }
 }</code></pre>
 
-## 📤 返回值
-
-<p>函数返回一个包含生成信息的对象：</p>
-
-<pre><code>{
-    heightMap: number[][],    // 二维高度图数组 [x][z]
-    config: Object,           // 实际使用的配置参数
-    origin: {                 // 生成区域原点
-        x: number,
-        z: number
-    },
-    size: {                   // 生成区域大小
-        x: number,
-        z: number
-    }
-}</code></pre>
-
 ## ⚙️ 参数调优指南
 
 <h3>地形平滑度</h3>
@@ -332,7 +315,7 @@ for (let x = 0; x < result.size.x; x++) {
 ## ⚠️ 注意事项
 
 <ol>
-  <li><strong>性能考虑</strong>：生成较大区域（如 256x256）可能需要较长时间，建议分批生成</li>
+  <li><strong>性能考虑</strong>：生成较大区域可能需要较长时间造成神岛的卡顿BUG</li>
   <li><strong>高度限制</strong>：确保 <code>baseHeight + amplitude</code> 不超过 <code>maxHeight</code></li>
   <li><strong>种子一致性</strong>：相同种子 + 相同配置 = 相同地形</li>
   <li><strong>坐标范围</strong>：注意世界的坐标边界限制</li>
