@@ -5,6 +5,7 @@
 <p>一个专为神奇代码岛（Box3）设计的柏林噪声地形生成库，可用于生成随机地形、山脉、丘陵等多种自然地貌。</p>
 
 [![Box3 Arena](https://img.shields.io/badge/%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81%E5%B2%9B-Arena-blue)](https://dao3.fun/)
+[![Box3 Arena](https://img.shields.io/badge/%E7%A5%9E%E5%B2%9B%E5%AE%9E%E9%AA%8C%E5%AE%A4-ArenaPro-green)](https://docs.box3lab.com/arenapro/zh/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ 功能特点
